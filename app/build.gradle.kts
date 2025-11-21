@@ -6,15 +6,14 @@ plugins {
 
 android {
     namespace = "ma.projet.soapcompteapp"
-    compileSdk = 34
+    compileSdk = 36   // ✔️ modifié ici
 
     defaultConfig {
         applicationId = "ma.projet.soapcompteapp"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 36   // ✔️ modifié ici
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -53,7 +52,8 @@ dependencies {
 
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
-    implementation(files("ksoap2.jar"))
+
+    // implementation(files("ksoap2.jar")) // ❌ doit rester supprimée
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -63,4 +63,3 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
-

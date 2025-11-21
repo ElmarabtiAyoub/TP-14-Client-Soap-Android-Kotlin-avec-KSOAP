@@ -16,8 +16,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://jitpack.io") }   // 🔥 AJOUT IMPORTANT
-        // jcenter()  // tu peux le supprimer, il ne sert plus
+
+        // ➕ IMPORTANT : repo Sonatype de KSOAP2
+        maven {
+            url = uri("https://oss.sonatype.org/content/repositories/ksoap2-android-releases/")
+            }
     }
 }
 
